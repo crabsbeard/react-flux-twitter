@@ -1,0 +1,21 @@
+{
+  "name": "chirper",
+  "description": "A very simple twitter clone built with flux and react js",
+  "main": "server.js",
+  "license": "MIT",
+  "moduleType": [
+    "globals"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "skeleton": "~2.0.4"
+  }
+}
