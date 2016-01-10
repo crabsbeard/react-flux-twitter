@@ -14,6 +14,7 @@ Object.keys(constants).forEach(function (key) {
             data: data
         });
     };
+});
 
 
 

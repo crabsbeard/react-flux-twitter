@@ -19,7 +19,6 @@ passport.use(new LocalStrategy(function (username, password, done){
         done(null, false);
     }
 }));
-
 passport.serializeUser(function (user, done) {
     done(null,  user.cid);
 });
@@ -68,10 +67,10 @@ router.post('/signup', function(req, res,next){
     }
 });
 
-router.post('/login', passport.authenticate('local', {
-    successRedirect: '/',
-    failureRedirect: '/login'
-}));
+router.post('/login', passport.authenticate('local'), function(req, res) {
+    window.write(res);
+    res.redirect('/');
+});
 
 router.get('/logout', function(req, res){
     req.logout();
@@ -101,3 +100,4 @@ function makeUserSafe(user) {
 exports.routes = router;
 exports.required = loginRequired;
 exports.safe = makeUserSafe;
+
