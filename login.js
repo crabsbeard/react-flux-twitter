@@ -52,7 +52,7 @@ router.post('/signup', function(req, res,next){
             fullname: req.body.fullname,
             email: req.body.email,
             username: req.body.username,
-            passwordhash: hash(req.body.password),
+            passwordHash: hash(req.body.password),
             following: []
         };
 
@@ -68,7 +68,6 @@ router.post('/signup', function(req, res,next){
 });
 
 router.post('/login', passport.authenticate('local'), function(req, res) {
-    window.write(res);
     res.redirect('/');
 });
 
