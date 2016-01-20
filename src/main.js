@@ -1,7 +1,10 @@
-var actions = require('./actions');
+var API = require("./api");
 
-Object.keys(actions).forEach(function (key) {
+var ChirpStore = require('./stores/chirps');
 
-    console.log(key);
-    console.log(actions[key].toString());
-});
+API.fetchChirps();
+
+
+
+
+
